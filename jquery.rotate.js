@@ -1,8 +1,11 @@
 (function($) {
-	$.fn.rotate = function(obj) {
-		
-		var delay = obj.delay||5000;
+	$.fn.rotate = function(v) {
 	
+		if(typeof v==='undefined')
+			var v = {};
+		
+		var delay = v.delay||5000;
+		
 		startRotator = function(){
 			if(current >= totale)
 				current = 0;
