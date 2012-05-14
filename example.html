@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Rotator</title>
+	</head>
+	<body>
+		<div id="rotator">
+		    <div style="display:block;"><img src="http://placehold.it/350x150" /></div>
+		    <div><img src="http://placehold.it/350x150/ff0000" /></div>
+		    <div><img src="http://placehold.it/350x150/00ff00" /></div>
+		    <div><img src="http://placehold.it/350x150/0000ff" /></div>
+		</div>
+		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="jquery.rotate.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#rotator').rotate({delay:1000});
+			});
+		</script>
+		
+		
+		<style type="text/css">
+			#rotator {
+				background:url();
+				width:350px;
+				height:150px;
+				position:relative;
+			}
+			
+			#rotator > div {
+				display:none;
+				position:absolute;
+				top:0;
+				left:0;
+			}
+			
+			#rotator #banner_selector_wrap {
+				position:absolute;
+				bottom:13px;
+				left:24px;
+				z-index:99;
+			}
+			
+			#rotator #banner_selector_wrap .banner_selector {
+				display:inline-block;
+				width:10px;
+				height:10px;
+				overflow:hidden;
+				float:left;
+				margin-left:5px;
+				cursor:pointer;
+			}
+			#rotator #banner_selector_wrap .banner_selector{
+				background:red
+			}
+			#rotator #banner_selector_wrap .banner_selector.active {
+				background:purple;
+			}
+		</style>
+	</body>
+</html>
