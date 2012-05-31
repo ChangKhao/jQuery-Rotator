@@ -23,12 +23,14 @@
 			current = 0,
 			i = setInterval(startRotator,delay);
 		
-		container.append('<span id="banner_selector_wrap"></span>');
-		var bannerButtons = container.find('#banner_selector_wrap');
-		
-		for(var count=1;count<=totale;count++){
-			bannerButtons.append('<span class="banner_selector" data-bannerPosition="'+count+'">'+count+'</span>');
-		}
+			if($('#banner_selector_wrap').length==0){
+				container.append('<span id="banner_selector_wrap"></span>');
+				var bannerButtons = container.find('#banner_selector_wrap');
+				for(var count=1;count<=totale;count++){
+					bannerButtons.append('<span class="banner_selector" data-bannerPosition="'+count+'">'+count+'</span>');
+				}
+			}
+			var bannerButtons = container.find('#banner_selector_wrap');
 		
 		$('.banner_selector').click(function(){
 		
