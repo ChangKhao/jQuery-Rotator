@@ -46,7 +46,6 @@
 			
 		});
 		startRotator();
-		
 		return container;
 	};
 })(jQuery);
