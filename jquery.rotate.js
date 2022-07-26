@@ -12,9 +12,7 @@
 			
 			container.find('#banner_selector_wrap .active').removeClass('active');
 			container.find('#banner_selector_wrap .banner_selector:eq('+current+')').addClass('active');
-			
 			container.children('div').filter(':eq('+current+')').fadeIn("slow").end().not(":eq("+current+")").fadeOut("slow");
-			
 			current++;
 		};
 		
