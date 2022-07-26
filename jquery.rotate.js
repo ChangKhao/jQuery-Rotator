@@ -44,7 +44,7 @@
 			
 		});
 		startRotator();
-		
+	
 		return container;
 	};
 })(jQuery);
